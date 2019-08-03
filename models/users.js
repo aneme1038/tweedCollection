@@ -16,3 +16,7 @@ const userSchema = Schema({
   password: {type: String, required: true},
   tweedList: [Tweed];
 })
+
+const User = mongoose.model('User', userSchema);
+
+module.exports = User;

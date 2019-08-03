@@ -17,3 +17,7 @@ const tweedSchema = Schema({
   price: Number,
   quantity: Number
 })
+
+const Tweed = mongoose.model('Tweed', tweedSchema);
+
+module.exports = Tweed;

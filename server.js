@@ -58,11 +58,27 @@ app.use(session({
 //___________________
 // Routes
 //___________________
-//localhost:3000
+//GET Route for main Index.ejs
 app.get('/' , (req, res) => {
-  res.send('Hello World!');
+  res.render('index.ejs', {
+    currentUser: req.session.currentUser;
+  })
 });
-
+//GET Route for logged in user
+app.get('/app', (req, res) => {
+  if (req.session.currentUser){
+    res.render('app/index.ejs');
+  } else {
+    res.redirect('/sessions/new');
+  }
+})
+//___________________
+// Controllers
+//___________________
+const userController = require('./controllers/users.js');
+app.use('/users', userController);
+const sessionsController = require('./controllers/sessions.js');
+app.use('/sessions', sessionsController);
 //___________________
 //Listener
 //___________________

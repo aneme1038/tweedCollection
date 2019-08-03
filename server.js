@@ -11,6 +11,7 @@ const mongoose = require ('mongoose');
 const session = require('express-session');
 const app = express ();
 const db = mongoose.connection;
+require('dotenv').config();
 //___________________
 //Port
 //___________________
@@ -61,7 +62,7 @@ app.use(session({
 //GET Route for main Index.ejs
 app.get('/' , (req, res) => {
   res.render('index.ejs', {
-    currentUser: req.session.currentUser;
+    currentUser: req.session.currentUser
   })
 });
 //GET Route for logged in user

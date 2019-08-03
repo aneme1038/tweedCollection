@@ -6,7 +6,6 @@
 //Dependencies
 //___________________
 const mongoose = require('mongoose');
-const Tweed = require('./tweed.js');
 const Schema = mongoose.Schema;
 //___________________
 //Schema
@@ -14,9 +13,19 @@ const Schema = mongoose.Schema;
 const userSchema = Schema({
   username: {type: String, required: true, unique: true},
   password: {type: String, required: true},
-  tweedList: [Tweed];
+  //reference another schema - solution found at https://mongoosejs.com/docs/populate.html
+  tweedList: [{type: Schema.Types.ObjectId, ref: 'Tweed'}]
+})
+const tweedSchema = Schema({
+  color: String,
+  pattern: String,
+  weight: Number,
+  price: Number,
+  quantity: Number
 })
 
+const Tweed = mongoose.model('Tweed', tweedSchema);
 const User = mongoose.model('User', userSchema);
 
 module.exports = User;
+module.exports = Tweed;

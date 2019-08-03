@@ -4,6 +4,21 @@
     <% include ./partials/head.ejs %>
   </head>
   <body>
-    <h1>Hello World</h1>
+    <header>
+      <% include ./partials/header.ejs %>
+    </header>
+    <main>
+      <div class="loginArea">
+        <% if(!currentUser) { %>
+          <fieldset>
+            <a href="/users/new" class="links"><button class="btn">Sign Up</button></a>
+            <a href="/sessions/new" class="links"><button>Log In</button></a>
+          </fieldset>
+        <% } %>
+      </div>
+    </main>
+    <footer>
+      <% include ./partials/footer.ejs %>
+    </footer>
   </body>
 </html>

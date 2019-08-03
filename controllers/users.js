@@ -6,7 +6,8 @@
 //___________________
 const express = require('express');
 const users = express.Router();
-const User = require('../models/users.js');
+const User = require('../models/schema.js');
+const Tweed = require('../models/schema.js');
 const bcrypt = require('bcrypt');
 //___________________
 //Routes

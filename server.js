@@ -73,6 +73,9 @@ app.get('/app', (req, res) => {
     res.redirect('/sessions/new');
   }
 })
+app.get('/views/media', (req, res) => {
+  res.redirect('/');
+})
 //___________________
 // Controllers
 //___________________

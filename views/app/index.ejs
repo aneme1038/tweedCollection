@@ -1,10 +1,26 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
-    <title></title>
+    <% include ../partials/head.ejs %>
   </head>
   <body>
-    <h1>User Logged In!</h1>
+    <header>
+        <% include ../partials/header.ejs %>
+    </header>
+    <main>
+      <h1>Collection</h1>
+      <div class=listingArea>
+        <ul>
+        <% for (let i = 0; i < tweeds.length; i++) { %>
+          <div class="listing">
+            <li><a href="/app/<%=tweeds[i].id%>"><img class="listingImage" src="<%=tweeds[i].img%>" alt="<%=tweeds[i].name%> Image"/></a></li>
+          </div>
+        <% } %>
+        </ul>
+      </div>
+    </main>
+    <footer>
+        <% include ../partials/footer.ejs %>
+    </footer>
   </body>
 </html>

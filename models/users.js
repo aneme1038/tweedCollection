@@ -7,25 +7,17 @@
 //___________________
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+const Tweed = require('../models/tweed.js');
 //___________________
 //Schema
 //___________________
 const userSchema = Schema({
-  username: {type: String, required: true, unique: true},
-  password: {type: String, required: true},
+  username: String,
+  password: String,
   //reference another schema - solution found at https://mongoosejs.com/docs/populate.html
   tweedList: [{type: Schema.Types.ObjectId, ref: 'Tweed'}]
 })
-const tweedSchema = Schema({
-  color: String,
-  pattern: String,
-  weight: Number,
-  price: Number,
-  quantity: Number
-})
 
-const Tweed = mongoose.model('Tweed', tweedSchema);
 const User = mongoose.model('User', userSchema);
 
 module.exports = User;
-module.exports = Tweed;

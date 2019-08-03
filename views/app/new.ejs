@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <% include ../partials/head.ejs %>
+  </head>
+  <body>
+    <header>
+        <% include ../partials/header.ejs %>
+    </header>
+    <main>
+      <h1>Create your Tweed Suit</h1>
+      <form action="/app" method="POST">
+        Name: <input type="text" name="name" placeholder="Name">/><br/>
+        Brand: <input type="text" name="brand" placeholder="Brand"><br/>
+        Color: <input type="text" name="color" placeholder="Color"/><br/>
+        Pattern: <input type="text" name="pattern" placeholder="Pattern"/><br/>
+        Weight: <input type="text" name="weight" placeholder="Weight(g)"/><br/>
+        <input type="submit" value="Create Suit"/>
+      </form>
+    </main>
+    <footer>
+        <% include ../partials/footer.ejs %>
+    </footer>
+  </body>
+</html>

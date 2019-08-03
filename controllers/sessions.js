@@ -6,8 +6,8 @@
 //___________________
 const express = require('express');
 const sessions = express.Router();
-const User = require('../models/schema.js');
-const Tweed = require('../models/schema.js');
+const User = require('../models/users.js');
+const Tweed = require('../models/tweed.js');
 const bcrypt = require('bcrypt');
 //___________________
 //Routes
@@ -34,7 +34,7 @@ sessions.post('/', (req, res) => {
         //add user to our session
         req.session.currentUser = foundUser;
         //redirect to the user show page (not the index. We will go to a show page listing user's tweed collection which will feature items user can click on to go to another show page)
-        res.redirect('/show.ejs');
+        res.redirect('/');
       } else {
         //if the password does not match...
         res.send('<a href="/">Password does not match</a>');

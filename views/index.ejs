@@ -6,15 +6,23 @@
   <body>
     <header>
       <% include ./partials/header.ejs %>
-      <video id="headerVideo" width="1280" height="720" poster="/media/tweedPoster.jpg" autoplay controls muted loop> -->
-        <source src="tweedVideo.mp4" type="video/mp4">
-        <source src="tweedVideo_webm.webm" type="video/webm">
-        <source src="tweedVideo_ogv.ogv" type="video/ogv">
+      <video id="headerVideo" width="1280" height="720" poster="/tweedPoster.jpg" autoplay muted loop>
+        <source src="/tweedVideo.mp4" type="video/mp4">
+        <source src="/tweedVideo_webm.webm" type="video/webm">
+        <source src="/tweedVideo_ogv.ogv" type="video/ogv">
       </video>
     </header>
     <main>
       <div class="loginArea">
-        <% if(!currentUser) { %>
+        <% if(currentUser) { %>
+          <h2>Welcome <%=currentUser.username%>!</h2>
+          <h2 id="userHeaderCol">View Your Collection</h2>
+          <a href="/app" class="links"><button class="btn">Time for Tweed</button></a>
+          <h2 id="userHeaderLog">Log Out</h2>
+          <form action="/sessions?_method=DELETE" method="POST">
+            <input type="submit" value="Log Out">
+          </form>
+        <% } else { %>
           <fieldset>
             <a href="/users/new" class="links"><button class="btn">Sign Up</button></a>
             <a href="/sessions/new" class="links"><button>Log In</button></a>

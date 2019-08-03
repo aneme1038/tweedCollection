@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <% include ../partials/head.ejs %>
+  </head>
+  <body>
+    <header>
+      <% include ../partials/header.ejs %>
+    </header>
+    <h1>Edit Tweed Suit</h1>
+    <form action="/app/<%=tweed.id%>?_method=PUT" method="POST">
+      Name: <input type="text" name="name" value="<%=tweed.name%>"/><br/>
+      Brand: <input type="text" name="brand" value="<%=tweed.brand%>">
+      Color: <input type="text" name="color" value="<%=tweed.color%>"/><br/>
+      Pattern: <input type="text" name="pattern" value="<%=tweed.pattern%>"/><br/>
+      Weight: <input type="text" name="weight" value="<%=tweed.weight%>"/><br/>
+      <input type="submit" value="Submit Changes"/>
+      <footer>
+        <% include ../partials/head.ejs %>
+      </footer>
+  </body>
+</html>

@@ -30,7 +30,7 @@ mongoose.set('useFindAndModify', false);
 mongoose.set('useCreateIndex', true);
 
 // Connect to Mongo
-mongoose.connect(MONGODB_URI ,  { useNewUrlParser: true});
+mongoose.connect(MONGODB_URI,  { useNewUrlParser: true});
 
 // Error / success
 db.on('error', (err) => console.log(err.message + ' is Mongod not running?'));
@@ -42,7 +42,7 @@ db.on('disconnected', () => console.log('mongo disconnected'));
 //___________________
 
 //use public folder for static assets
-// app.use(express.static('public'));
+app.use(express.static('public'));
 
 // populates req.body with parsed info from forms - if no data from forms will return an empty object {}
 app.use(express.urlencoded({ extended: false }));// extended: false - does not allow nested objects in query strings
@@ -73,9 +73,6 @@ app.get('/app', (req, res) => {
     res.redirect('/sessions/new');
   }
 })
-app.get('/views/media', (req, res) => {
-  res.redirect('/');
-})
 //___________________
 // Controllers
 //___________________
@@ -83,6 +80,8 @@ const userController = require('./controllers/users.js');
 app.use('/users', userController);
 const sessionsController = require('./controllers/sessions.js');
 app.use('/sessions', sessionsController);
+const tweedController = require('./controllers/tweed.js');
+app.use('/tweed', tweedController);
 //___________________
 //Listener
 //___________________

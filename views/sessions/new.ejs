@@ -1,17 +1,31 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <% include ./partials/head.ejs %>
+    <% include ../partials/head.ejs %>
   </head>
   <body>
     <header>
-      <% include ./partials/header.ejs %>
+      <% include ../partials/header.ejs %>
     </header>
     <main>
-
+      <form action="/sessions" method="POST">
+        <fieldset>
+          <div class="input-field">
+            <legend>Log In</legend>
+            <input type="text" id="username" name="username" placeholder="Username" required>
+            <label for="username">User Name</label>
+          </div>
+          <div class="input-field">
+            <legend>Password</legend>
+            <input type="password" name="password" placeholder="Password" required>
+            <label for="password">Password</label>
+          </div>
+        </fieldset>
+        <input type="submit" class="btn" id="logInBtn" value="Log In">
+      </form>
     </main>
     <footer>
-      <% include ./partials/footer.ejs %>
+      <% include ../partials/footer.ejs %>
     </footer>
   </body>
 </html>

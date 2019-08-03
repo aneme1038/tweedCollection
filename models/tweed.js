@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////
-//TWEED DATABASE SCHEMA.
-// -This file sets up the mongoose schema that will be used to store tweed database information. It might also end up including other information such as an array of selected Tweed Suits.
+//USER DATABASE SCHEMA.
+// -This file sets up the mongoose schema that will be used to store user information such as username and password. It might also end up including other information such as an array of selected Tweed Suits.
 ////////////////////////////////////////////////////////////
 //___________________
 //Dependencies
@@ -10,6 +10,15 @@ const Schema = mongoose.Schema;
 //___________________
 //Schema
 //___________________
+const tweedSchema = Schema({
+  name: String,
+  img: String,
+  brand: String,
+  color: String,
+  pattern: String,
+  weight: Number
+})
 
+const Tweed = mongoose.model('Tweed', tweedSchema);
 
 module.exports = Tweed;

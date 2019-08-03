@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <% include ../partials/head.ejs %>
+  </head>
+  <body>
+    <header>
+      <% include ../partials/header.ejs %>
+    </header>
+    <main>
+      <div class="showMain">
+        <div id="listingDetails">
+          <h1><%=tweed.name%></h1>
+          <fieldset>
+            <legend>Attributes</legend>
+            <ul>
+              <li>Brand: <%=tweed.brand%></li>
+              <li>Color: <%=tweed.color%></li>
+              <li>Pattern: <%=tweed.pattern%></li>
+              <li>Weight: <%=tweed.weight%></li>
+            </ul>
+          </fieldset>
+        </div>
+        <div class="dangerArea">
+          <fieldset id="editArea">
+            <legend>Edit / Delete</legend>
+            <a href="/app/<%=tweed.id;%>/edit">Edit This Suit</a>
+            <form action="/app/<%=tweed.id;%>?_method=DELETE" method="POST">
+              <input type="submit" id="deleteBtn" value="DELETE SUIT">
+            </form>
+          </fieldset>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <% include ../partials/footer.ejs %>
+    </footer>
+  </body>
+</html>

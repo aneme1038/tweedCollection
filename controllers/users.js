@@ -6,8 +6,8 @@
 //___________________
 const express = require('express');
 const users = express.Router();
-const User = require('../models/schema.js');
-const Tweed = require('../models/schema.js');
+const User = require('../models/users.js');
+const Tweed = require('../models/tweed.js');
 const bcrypt = require('bcrypt');
 //___________________
 //Routes
@@ -18,8 +18,9 @@ users.get('/new', (req, res) => {
 })
   //POST Route
 users.post('/', (req, res) => {
-  //overwrite the user password with a hashed ppassword, than pass it into the database.
+  //overwrite the user password with a hashed password, than pass it into the database.
   req.body.password = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10));
+  console.log(req.body);
   User.create(req.body, (error, createdUser) => {
     if (error){
       console.log(error);

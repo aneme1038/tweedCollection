@@ -16,7 +16,7 @@ const tweedSchema = Schema({
   brand: String,
   color: String,
   pattern: String,
-  weight: Number
+  weight: String,
 })
 
 const Tweed = mongoose.model('Tweed', tweedSchema);

@@ -1,12 +1,30 @@
-<div class="logoArea">
-  <div id="symbolLeft">
-    <img id="tweedlyLogo" src="/gentlemanlogo.png" alt="Tweed-ly Logo"/>
+<div class="container row left-align" id="header">
+  <div id="symbolLeft" class="col s1">
+    <img id="tweedilyLogo" src="/gentlemanlogo.png" alt="Tweed-ly Logo"/>
   </div>
   <div id="separateLogo">
   </div>
-  <div id="logoText">
-    <h1 id=tweedlyText>
-      Tweed-Ly
+  <div id="container left-align col s1">
+    <h1 id=tweedilyText>
+      Tweedily
     </h1>
+  </div>
+  <div class="login">
+    <div class="container row">
+      <% if(currentUser) { %>
+        <h2>Welcome <%=currentUser.username%>!</h2>
+        <h2 id="userHeaderCol">View Your Collection</h2>
+        <a href="/tweed/app" class="links"><button class="waves-effect waves-light btn button">Time for Tweed</button></a>
+        <h2 id="userHeaderLog">Log Out</h2>
+        <form action="/sessions?_method=DELETE" method="POST">
+          <input type="submit" value="Log Out">
+        </form>
+      <% } else { %>
+        <div class="loginSignUp">
+          <a href="/users/new" class="links"><button class="waves-effect waves-light btn button">Sign Up</button></a>
+          <a href="/sessions/new" class="links"><button class="waves-effect waves-light btn button">Log In</button></a>
+        </div>
+      <% } %>
+    </div>
   </div>
 </div>

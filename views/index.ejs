@@ -5,7 +5,36 @@
   </head>
   <body>
     <header>
-      <% include ./partials/header.ejs %>
+      <div class="container row left-align" id="header">
+        <div id="symbolLeft" class="col s1">
+          <img id="tweedilyLogo" src="/gentlemanlogo.png" alt="Tweed-ly Logo"/>
+        </div>
+        <div id="separateLogo">
+        </div>
+        <div id="container left-align col s1">
+          <h1 id=tweedilyText>
+            Tweedily
+          </h1>
+        </div>
+        <div class="login">
+          <div class="container row">
+            <% if(currentUser) { %>
+              <h2>Welcome <%=currentUser.username%>!</h2>
+              <h2 id="userHeaderCol">View Your Collection</h2>
+              <a href="/tweed/app" class="links"><button class="waves-effect waves-light btn button">Time for Tweed</button></a>
+              <h2 id="userHeaderLog">Log Out</h2>
+              <form action="/sessions?_method=DELETE" method="POST">
+                <input type="submit" value="Log Out">
+              </form>
+            <% } else { %>
+              <div class="loginSignUp">
+                <a href="/users/new" class="links"><button class="waves-effect waves-light btn button">Sign Up</button></a>
+                <a href="/sessions/new" class="links"><button class="waves-effect waves-light btn button">Log In</button></a>
+              </div>
+            <% } %>
+          </div>
+        </div>
+      </div>
       <div class="container video-container">
         <video class="center-align" id="headerVideo" width="100%" height="720" poster="/tweedPoster.jpg" autoplay muted loop>
           <source src="/tweedVideo.mp4" type="video/mp4">
@@ -13,9 +42,30 @@
           <source src="/tweedVideo_ogv.ogv" type="video/ogv">
         </video>
       </div>
+      <div class="separateHeader">
+      </div>
     </header>
-    <main>
-
+    <main class="mainIndex">
+      <div class="mainRow">
+        <% for (let i = 0; i < 3; i++){ %>
+          <div class="column">
+            <h3>Something</h3>
+            <h4>Something Else</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <img src="#" alt="#">
+          </div>
+        <% } %>
+      </div>
+      <div class="secondRow">
+        <% for (let i = 0; i < 3; i++){ %>
+          <div class="column">
+            <h3>Something</h3>
+            <h4>Something Else</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <img src="#" alt="#">
+          </div>
+        <% } %>
+      </div>
     </main>
     <footer>
       <% include ./partials/footer.ejs %>

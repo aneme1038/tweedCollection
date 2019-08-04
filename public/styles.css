@@ -1,5 +1,11 @@
+/* element {
+  --listing-font: 'Cormorant', serif;
+} */
 body {
   margin: -1px;
+  background: rgb(1,1,1);
+  background: linear-gradient(180deg, rgba(1,1,1,1) 0%, rgba(255,255,255,1) 100%);
+  border: 5px double black;
 }
 #headerVideo {
   width: 100%;
@@ -40,9 +46,29 @@ body {
   margin: -1px;
   height: 5em;
   border: 5px double black;
-  background: rgb(0,0,0);
-  background: linear-gradient(302deg, rgba(0,0,0,1) 0%, rgba(255,255,255,1) 100%);
+  background: rgb(1,1,1);
+  background: linear-gradient(86deg, rgba(1,1,1,1) 0%, rgba(255,255,255,1) 100%);
 }
 .footer img {
   padding: 20px;
+}
+.separateHeader {
+  border-top: 5px double black;
+  padding: 1px;
+}
+.mainIndex {
+  display: flex;
+  margin: 100px;
+  height: auto;
+}
+.mainRow, .secondRow {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.column {
+  text-align: center;
+  border: 5px double black;
+  border-radius: 20px;
+  margin: 20px;
 }

@@ -13,17 +13,13 @@ body {
 }
 .tweedlyText {
   font-family: 'Stardos Stencil', cursive;
-  font-size: 3em;
+  font-size: 4em;
 }
 .btn {
   font-size: 1em;
   background: rgb(137,140,142);
   background: linear-gradient(135deg, rgba(137,140,142,1) 0%, rgba(189,172,134,1) 100%);
   box-shadow: 0px 5px 7px 3px rgba(0,0,0,0.24);
-}
-.login {
-  margin: 8em;
-  font-size: 0.5em;
 }
 .header {
   display: flex;
@@ -39,6 +35,11 @@ body {
 .indexBtn {
   font-size: 2em;
   margin-top: 10px;
+  margin-right: 10px;
+}
+.backBtn {
+  font-size: 2em;
+  margin: 20px;
 }
 .footer {
   display: flex;
@@ -58,8 +59,10 @@ body {
   width: 70px;
   padding: 20px;
 }
-h1 {
+.h1 {
   font-family: 'Stardos Stencil', cursive;
+  margin-top: 20px;
+  margin-bottom: 0;
 }
 .container {
   width: 100%;
@@ -71,6 +74,17 @@ h1 {
   text-align: center;
   height: auto;
 }
+.fieldset {
+  text-align: center;
+}
+.textArea {
+  width: 90%;
+  height: 150px;
+}
+.pageHeader {
+  color: #AFBDBD;
+}
+
 /*===========================
 // HEADER - LANDING PAGE
 ===========================*/
@@ -80,9 +94,13 @@ h1 {
 }
 .welcomeArea {
   display: flex;
-  font-size: 3.25em;
+  font-size: 2em;
   margin: 0;
   align-items: center;
+}
+.loginSignUp {
+  margin: 3em;
+  font-size: 2em;
 }
 #welcomeHeader {
   font-size: 1.25em;
@@ -150,86 +168,61 @@ h1 {
 /*===========================
 // APP - INDEX.EJS
 ===========================*/
-.listing {
-  border: 5px double black;
-}
-/*===START w3schools.com/howto/howto_css_user_rating.asp=*/
-/*===This block of code is associated with app-index.ejs section of code to help create rating system. Currently playing around with the syling and theme and how this block of code works === */
-.heading {
-  font-size: 25px;
-  margin-right: 25px;
-}
-.fa {
-  font-size: 25px;
-}
-.checked {
+#collectionHeader {
   color: #AFBDBD;
 }
-  /*Three Column Layout */
-.side {
-  float: left;
-  width: 15%;
-  margin-top: 10px;
-}
-.middle {
-  float: left;
-  width: 70%;
-  margin-top: 10px;
-}
-  /*Place text to the right */
-.right {
-  text-align: right;
-}
-  /*Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-  /*The bar container */
-.bar-container {
+.listingArea {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex-wrap: wrap;
   width: 100%;
-  background-color: #f1f1f1;
-  text-align: center;
-  color: white;
 }
-  /*Individual bars */
-.bar-5 {
-  width: 60%;
-  height: 18px;
-  background-color: #4CAF50;
+.listing {
+  border: 5px double black;
+  background-color: white;
+  height: 7em;
+  width: 5em;
 }
-.bar-4 {
-  width: 30%;
-  height: 18px;
-  background-color: #2196F3;
+.listing img {
+  width: 100%;
+  height: 5em;
 }
-.bar-3 {
-  width: 10%;
-  height: 18px;
-  background-color: #00bcd4;
+.h5 {
+  font-size: 0.5em;
+  margin: 0;
 }
-.bar-2 {
-  width: 4%;
-  height: 18px;
-  background-color: #ff9800;
+.ratingBar {
+  font-size: 0.5em;
 }
-.bar-1 {
-  width: 15%;
-  height: 18px;
-  background-color: #f44346;
+/*===========================
+// APP - SHOW.EJS
+===========================*/
+.showBackBtn {
+  font-size: 0.5em;
 }
-  /* responsive layout - make the columns stack on top of each other instead of next to each other */
-@media (max-width: 400px) {
-  .side, .middle {
-    width: 100%;
-  }
-  /* Hide the right column on small screens */
-  .right {
-    display: none;
-  }
+#listingName {
+  color: #AFBDBD;
 }
-/*======================END BLOCK OF CODE FROM w3schools=*/
+#deleteBtn {
+  font-size: 0.5em;
+  margin: 30px;
+}
+.separateBtn {
+  margin-top: 30px;
+  border-top: 5px double black;
+}
+.priceHeader {
+  margin: 0;
+  color: #AFBDBD;
+}
+.description {
+  font-size: 0.5em;
+}
+.showImage {
+  height: auto;
+  width: 5em;
+}
 
 /*================SIZES PAST 1000px================*/
 @media (min-width: 800px) {
@@ -264,6 +257,9 @@ h1 {
   }
   .submitBtn {
     margin-bottom: 100px;
+  }
+  .loginSignUp {
+    font-size: 1.5em;
   }
 }
 @media (min-width: 1000px) {
@@ -301,9 +297,9 @@ h1 {
   .tweedlyText {
     font-size: 2em;
   }
-  .login {
-    font-size: 1em;
-    margin-top: 30px;
+  .loginSignUp {
+    font-size: 1.5em;
+    margin-top: 8em;
     margin-right: 10px;
   }
   .indexBtn {
@@ -342,7 +338,7 @@ h1 {
   .tweedlyText {
     font-size: 3em;
   }
-  .login {
+  .loginSignUp {
     font-size: 1.5em;
   }
   #userNewEJS {

@@ -8,25 +8,34 @@
       <% include ../partials/header.ejs %>
     </header>
     <main>
-      <div class="showMain">
-        <div id="listingDetails">
-          <h1><%=tweed.name%></h1>
+      <div class="container">
+        <a href="/tweed/app/"><button class="btn showBackBtn">Go Back</button></a>
+        <div class="listingDetails">
+          <span class="listingRow">
+            <h1 class="h1" id="listingName"><%=tweed.name%></h1>
+            <img class="showImage" src="<%=tweed.img%>"/>
+            <h3 class="h3 priceHeader">$<%=tweed.price%></h3>
+          </span>
           <fieldset>
-            <legend>Attributes</legend>
+            <h3 class="h3">Specifications</h3>
+            <div class="separateBtn">
+            </div>
             <ul>
-              <li>Brand: <%=tweed.brand%></li>
-              <li>Color: <%=tweed.color%></li>
-              <li>Pattern: <%=tweed.pattern%></li>
-              <li>Weight: <%=tweed.weight%></li>
+              <li style="list-style: none">Brand: <%=tweed.brand%></li>
+              <li style="list-style: none">Color: <%=tweed.color%></li>
+              <li style="list-style: none">Pattern: <%=tweed.pattern%></li>
+              <li style="list-style: none">Weight: <%=tweed.weight%></li>
+              <li style="list-style: none">Description: <p class="description"><%=tweed.description%></p></li>
             </ul>
           </fieldset>
         </div>
         <div class="dangerArea">
           <fieldset id="editArea">
-            <legend>Edit / Delete</legend>
-            <a href="/tweed/app/<%=tweed.id;%>/edit">Edit This Suit</a>
+            <a href="/tweed/app/<%=tweed.id;%>/edit"><button class="btn">Customize</button></a>
+            <div class="separateBtn">
+            </div>
             <form action="/tweed/app/<%=tweed.id;%>?_method=DELETE" method="POST">
-              <input type="submit" id="deleteBtn" value="DELETE SUIT">
+              <input class="btn" type="submit" id="deleteBtn" value="DELETE SUIT">
             </form>
           </fieldset>
         </div>

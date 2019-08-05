@@ -13,10 +13,12 @@ const Schema = mongoose.Schema;
 const tweedSchema = Schema({
   name: String,
   img: String,
+  description: String,
   brand: String,
   color: String,
   pattern: String,
   weight: String,
+  price: Number
 })
 
 const Tweed = mongoose.model('Tweed', tweedSchema);

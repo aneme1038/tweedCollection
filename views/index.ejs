@@ -14,21 +14,21 @@
             Tweed-ly
           </h1>
         </div>
-        <div class="login">
+        <div>
           <div>
             <% if(currentUser) { %>
-              <div class="welcomeArea">
+              <span class="welcomeArea">
                 <h2 class="h2" id="welcomeHeader">Greetings <br/><%=currentUser.username%>!</h2>
                 <a href="/tweed/app" class="links"><button id="tweedTime" class="btn">Tweed-ly</button></a>
                 <form action="/sessions?_method=DELETE" method="POST">
                   <input class="btn" id="logBtn" type="submit" value="Log Out">
                 </form>
-              </div>
+              </span>
             <% } else { %>
-              <div class="loginSignUp">
+              <span class="loginSignUp">
                 <a href="/users/new" class="links"><button class="btn">Sign Up</button></a>
                 <a href="/sessions/new" class="links"><button class="btn">Log In</button></a>
-              </div>
+              </span>
             <% } %>
           </div>
         </div>

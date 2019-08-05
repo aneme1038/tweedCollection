@@ -72,9 +72,9 @@ tweed.get('/app/:id', (req, res) => {
 })
 //TWEED Post route
 tweed.post('/app', (req, res) => {
-Tweed.create(req.body, (error, createdTweed) => {
-  res.redirect('/tweed/app');
-})
+  Tweed.create(req.body, (error, createdTweed) => {
+    res.redirect('/tweed/app');
+  })
 })
   //INDEX for Tweed
 tweed.get('/app', (req, res) => {

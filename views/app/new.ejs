@@ -8,15 +8,21 @@
         <% include ../partials/header.ejs %>
     </header>
     <main>
-      <h1>Create your Tweed Suit</h1>
-      <form action="/app" method="POST">
-        Name: <input type="text" name="name" placeholder="Name">/><br/>
-        Brand: <input type="text" name="brand" placeholder="Brand"><br/>
-        Color: <input type="text" name="color" placeholder="Color"/><br/>
-        Pattern: <input type="text" name="pattern" placeholder="Pattern"/><br/>
-        Weight: <input type="text" name="weight" placeholder="Weight(g)"/><br/>
-        <input type="submit" value="Create Suit"/>
-      </form>
+      <a href="/tweed/app/"><button class="btn backBtn">Go Back</button></a>
+      <div class="container">
+        <h1 class="h1">Create your Tweed Suit</h1>
+        <form action="/tweed/app" method="POST">
+          Name: <input class="input" type="text" name="name" placeholder="Herringbone"/><br/>
+          Image: <input class="input" type="text" name="img" placeholder="Link to Image (URL)"/><br/>
+          Brand: <input class="input" type="text" name="brand" placeholder="Flecks Donegal"><br/>
+          Price: <input class="input" type="number" name="price" placeholder="225"/><br/>
+          Color: <input class="input" type="text" name="color" placeholder="Gray"/><br/>
+          Pattern: <input class="input" type="text" name="pattern" placeholder="Standard"/><br/>
+          Description: <input class="input" type="textarea" name="description" placeholder="Description of Suit"/><br/>
+          Weight: <input class="input" type="text" name="weight" placeholder="Mid/230 gsm"/><br/>
+          <input class="btn submitBtn" type="submit" value="Create Suit"/>
+        </form>
+      </div>
     </main>
     <footer>
         <% include ../partials/footer.ejs %>

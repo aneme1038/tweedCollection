@@ -19,15 +19,15 @@
             <% if(currentUser) { %>
               <h2>Welcome <%=currentUser.username%>!</h2>
               <h2 id="userHeaderCol">View Your Collection</h2>
-              <a href="/tweed/app" class="links"><button class="waves-effect waves-light btn button">Time for Tweed</button></a>
+              <a href="/tweed/app" class="links"><button class="btn">Time for Tweed</button></a>
               <h2 id="userHeaderLog">Log Out</h2>
               <form action="/sessions?_method=DELETE" method="POST">
-                <input type="submit" value="Log Out">
+                <input class="btn" type="submit" value="Log Out">
               </form>
             <% } else { %>
               <div class="loginSignUp">
-                <a href="/users/new" class="links"><button class="waves-effect waves-light btn button">Sign Up</button></a>
-                <a href="/sessions/new" class="links"><button class="waves-effect waves-light btn button">Log In</button></a>
+                <a href="/users/new" class="links"><button class="btn">Sign Up</button></a>
+                <a href="/sessions/new" class="links"><button class="btn">Log In</button></a>
               </div>
             <% } %>
           </div>
@@ -44,47 +44,41 @@
       </div>
     </header>
     <main class="mainIndex">
-      <div class="mainRow">
-        <div class="column">
-          <h2>Tweed Suits</h2>
-          <h3>Large Collection</h3>
-          <p>Tweed-ly has many suit options to choose from. We feature a large collection of different brands, colors, patterns, and sizes. Choose your favorites and add them to your personal collection.</p>
-          <img src="tweedPoster.jpg" alt="Suit Image">
-        </div>
-        <div class="column">
-          <h2>Brands</h2>
-          <h3>Some of the Best Brands, All in One Place!</h3>
-          <p>Choose from a variety of top tweed brands including Harris Tweed, Twisted Tailor, Heart and Dagger, Moss Bros, and more!</p>
-          <img src="tweedJacket.jpg" alt="Tweed Jacket">
-        </div>
+      <div class="column" id="tweedSuitCard">
+        <h2>Tweed Suits</h2>
+        <h3>Large Collection</h3>
+        <p>Tweed-ly has many suit options to choose from. We feature a large collection of different brands, colors, patterns, and sizes. Choose your favorites and add them to your personal collection.</p>
+        <img src="tweedPoster.jpg" alt="Suit Image">
       </div>
-      <div class="secondRow">
-        <div class="column" id="colorText">
-          <h2>Colors</h2>
-          <h3>Suave and Sophisticated Colors</h3>
-          <p>Customize your tweed suit by choosing a color that fits you. Plenty of colors to choose from that will never dull are will only further amplify how you look.</p>
-          <img src="tweedColor.jpg" alt="Tweed Colors">
-        </div>
-        <div class="column" id="offColor">
-          <h2>Patterns</h2>
-          <h3>Tweed Patterns for Everyone</h3>
-          <p>With many different patterns to choose from, you can pick a pattern that best fits what you are going for. Like Stripes? How about Checkered? Or perhaps a Herringbone style? The choice is yours!</p>
-          <img src="tweedPattern.jpg" alt="Tweed Pattern">
-        </div>
+      <div class="column" id="tweedJacketCard">
+        <h2>Brands</h2>
+        <h3>Some of the Best Brands, All in One Place!</h3>
+        <p>Choose from a variety of top tweed brands including Harris Tweed, Twisted Tailor, Heart and Dagger, Moss Bros, and more! Each Brand provides some of the best Tweed you can find.</p>
+        <img src="tweedJacket.jpg" alt="Tweed Jacket">
       </div>
-      <div class="thirdRow">
-        <div class="column" id="sample">
-          <h2>Custom Fit</h2>
-          <h3>Customize the Length and Size of your Suit</h3>
-          <p>Select preferences for your tweed suit based on your bodily needs and specifications. Want a longer sleeve? No problem! How bout extra pockets? You got it! The choice is yours!</p>
-          <img src="tweedSample.jpg" alt="Tweed Sample">
-        </div>
-        <div class="column">
-          <h2>Fabric Weight</h2>
-          <h3>Customize the thickness of your fabric</h3>
-          <p>The weight of your tweed is an important attribute. Take great care in selecting one that will fit your needs and desires. Like the feel of a heavy jacket? Go for a higher fabric weight. Like a bit more breathing room? Go for a lighter weight.</p>
-          <img src="tweedWeight.jpg" alt="Tweed Weight">
-        </div>
+      <div class="column" id="colorText">
+        <h2>Colors</h2>
+        <h3>Suave and Sophisticated Colors</h3>
+        <p>Customize your tweed suit by choosing a color that fits you. Plenty of colors to choose from that will never dull are will only further amplify how you look.</p>
+        <img src="tweedColor.jpg" alt="Tweed Colors">
+      </div>
+      <div class="column" id="offColor">
+        <h2>Patterns</h2>
+        <h3>Tweed Patterns for Everyone</h3>
+        <p>With many different patterns to choose from, you can pick a pattern that best fits what you are going for. Like Stripes? How about Checkered? Or perhaps a Herringbone style? The choice is yours!</p>
+        <img src="tweedPattern.jpg" alt="Tweed Pattern">
+      </div>
+      <div class="column" id="sample">
+        <h2>Custom Fit</h2>
+        <h3>Customize the Length and Size of your Suit</h3>
+        <p>Select preferences for your tweed suit based on your bodily needs and specifications. Want a longer sleeve? No problem! How bout extra pockets? You got it! The choice is yours!</p>
+        <img src="tweedSample.jpg" alt="Tweed Sample">
+      </div>
+      <div class="column" id="weightCard">
+        <h2>Fabric Weight</h2>
+        <h3>Customize the thickness of your fabric</h3>
+        <p>The weight of your tweed is an important attribute. Take great care in selecting one that will fit your needs and desires. Like the feel of a heavy jacket? Go for a higher fabric weight. Like a bit more breathing room? Go for a lighter weight.</p>
+        <img src="tweedWeight.jpg" alt="Tweed Weight">
       </div>
     </main>
     <footer>

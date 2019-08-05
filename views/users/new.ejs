@@ -8,16 +8,16 @@
       <% include ../partials/header.ejs %>
     </header>
     <main>
-      <div class="container">
-        <h1>Registration</h1>
+      <div class="container" id="userNewEJS">
+        <h1 class="h1">Registration</h1>
         <form action="/users" method="POST">
-          <fieldset>
+          <fieldset class="fieldset">
             <label for="username">Username</label>
-            <input type="text" name="username" placeholder="Username" required/>
-            <label for="password">Password</label>
-            <input type="password" name="password" placeholder="Password">
+            <input class="input" type="text" name="username" placeholder="Username" required/>
+            <label class="password" for="password">Password</label>
+            <input class="input password" type="password" name="password" placeholder="Password">
           </fieldset>
-          <input type="submit" value="Register">
+          <input class="btn submitBtn" type="submit" value="Register">
         </form>
       </div>
     </main>

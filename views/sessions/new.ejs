@@ -4,34 +4,26 @@
     <% include ../partials/head.ejs %>
   </head>
   <body>
-    <header class="header">
-      <div class="headerArea">
-        <div>
-          <img class="tweedlyLogo logo" src="/gentlemanlogo.png" alt="Tweed-ly Logo"/>
-        </div>
-        <div>
-          <h1 class="tweedlyText logoText">
-            Tweed-ly
-          </h1>
-        </div>
-      </div>
+    <header>
+      <% include ../partials/header.ejs %>
     </header>
     <main>
-      <form action="/sessions" method="POST">
-        <fieldset>
-          <div class="input-field">
-            <legend>Log In</legend>
-            <input type="text" id="username" name="username" placeholder="Username" required>
-            <label for="username">User Name</label>
-          </div>
-          <div class="input-field">
-            <legend>Password</legend>
-            <input type="password" name="password" placeholder="Password" required>
-            <label for="password">Password</label>
-          </div>
-        </fieldset>
-        <input type="submit" class="btn" id="logInBtn" value="Log In">
-      </form>
+      <div class="container">
+        <form action="/sessions" method="POST">
+          <fieldset class="fieldset">
+            <div>
+              <h1>Log In</h1>
+              <label for="username">Username</label>
+              <input class="input" type="text" id="username" name="username" placeholder="Username" required>
+            </div>
+            <div>
+              <label class="password" for="password">Password</label>
+              <input class="input pasword" type="password" name="password" placeholder="Password" required>
+            </div>
+          </fieldset>
+          <input type="submit" class="btn" id="logInBtn" value="Log In">
+        </form>
+      </div>
     </main>
     <footer>
       <% include ../partials/footer.ejs %>

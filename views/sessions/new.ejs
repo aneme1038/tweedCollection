@@ -4,8 +4,17 @@
     <% include ../partials/head.ejs %>
   </head>
   <body>
-    <header>
-      <% include ../partials/header.ejs %>
+    <header class="header">
+      <div class="headerArea">
+        <div>
+          <img class="tweedlyLogo logo" src="/gentlemanlogo.png" alt="Tweed-ly Logo"/>
+        </div>
+        <div>
+          <h1 class="tweedlyText logoText">
+            Tweed-ly
+          </h1>
+        </div>
+      </div>
     </header>
     <main>
       <form action="/sessions" method="POST">

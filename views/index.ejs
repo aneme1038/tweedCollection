@@ -15,15 +15,15 @@
           </h1>
         </div>
         <div class="login">
-          <div class="container row">
+          <div>
             <% if(currentUser) { %>
-              <h2>Welcome <%=currentUser.username%>!</h2>
-              <h2 id="userHeaderCol">View Your Collection</h2>
-              <a href="/tweed/app" class="links"><button class="btn">Time for Tweed</button></a>
-              <h2 id="userHeaderLog">Log Out</h2>
-              <form action="/sessions?_method=DELETE" method="POST">
-                <input class="btn" type="submit" value="Log Out">
-              </form>
+              <div class="welcomeArea">
+                <h2 class="h2" id="welcomeHeader">Greetings <br/><%=currentUser.username%>!</h2>
+                <a href="/tweed/app" class="links"><button id="tweedTime" class="btn">Tweed-ly</button></a>
+                <form action="/sessions?_method=DELETE" method="POST">
+                  <input class="btn" id="logBtn" type="submit" value="Log Out">
+                </form>
+              </div>
             <% } else { %>
               <div class="loginSignUp">
                 <a href="/users/new" class="links"><button class="btn">Sign Up</button></a>
@@ -33,7 +33,7 @@
           </div>
         </div>
       </div>
-      <div class="container video-container">
+      <div class="video-container">
         <video class="center-align" id="headerVideo" width="100%" height="720" poster="/tweedPoster.jpg" autoplay muted loop>
           <source src="/tweedVideo.mp4" type="video/mp4">
           <source src="/tweedVideo_webm.webm" type="video/webm">

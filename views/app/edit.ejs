@@ -22,7 +22,7 @@
               <option value="pittsford">Pittsford</option>
             </select>
             <h3 class="h3">Color</h3>
-            <input class="input" type="text" name="color" placeholder="Gray"/><br/>
+            <input class="input" type="text" name="color" placeholder="<%=tweed.color%>"/><br/>
             <!--Following code is by Casey Jay Martin at https://codepen.io/CASEYJAYMARTIN/pen/wLJkl -->
             <div id="colorWheelBackground">
               <div id="colorWheel">
@@ -41,7 +41,7 @@
               </div>
             </div>
             <!-- END CODE FROM CODEPEN -->
-            <h3 class="h3">Image</h3><input class="input" type="text" name="img" placeholder="Link to Image (URL)"/><br/>
+            <h3 class="h3">Image</h3><input class="input" type="text" name="img" placeholder="<%=tweed.img%>"/><br/>
             <h3 class="h3">Pattern</h3>
             <select class="dropdown" name="pattern">
               <option value="Herringbone">Herringbone</option>
@@ -49,8 +49,8 @@
               <option value="Solid">Solid</option>
               <option value="Checkered">Checkered</option>
             </select>
-            <h3 class="h3">Description</h3> <input class="input" type="textarea" name="description" placeholder="Description of Suit"/><br/>
-            <h3 class="h3">Weight</h3> <input class="input" type="text" name="weight" placeholder="Mid/230 gsm"/><br/>
+            <h3 class="h3">Description</h3> <input class="input" type="textarea" name="description" placeholder="<%=tweed.description%>"/><br/>
+            <h3 class="h3">Weight</h3> <input class="input" type="text" name="weight" placeholder="<%=tweed.weight%>"/><br/>
           </div>
           <h2 class="h2" id="jacketHeader">Customize Jacket</h2>
           <div class="jacketSection">

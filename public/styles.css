@@ -200,7 +200,8 @@ body {
 ===========================*/
 #collectionHeader {
   color: #AFBDBD;
-  font-size: 0.5em;
+  text-align: center;
+  font-size: 2em;
 }
 .listingArea {
   display: flex;
@@ -533,14 +534,25 @@ body {
   ===========================*/
   #collectionHeader {
     color: #AFBDBD;
-    font-size: 0.5em;
+    font-size: 2em;
   }
   .listingArea {
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
+    margin: 0 auto;
+    width: 90%;
+  }
+  .listingArea ul {
+    display: flex;
+    padding: 0;
+    margin: 0 auto;
     width: 100%;
+    height: auto;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
   .listing {
     border: 5px double black;
@@ -812,9 +824,14 @@ body {
     margin-left: 10px;
   }
   #userNewEJS {
+    display: flex;
+    flex-direction: column;
     height: auto;
   }
   #sessionsNewEJS{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     height: auto;
   }
   #logInBtn {
@@ -826,14 +843,24 @@ body {
   ===========================*/
   #collectionHeader {
     color: #AFBDBD;
-    font-size: 0.5em;
+    font-size: 2em;
   }
   .listingArea {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     flex-wrap: wrap;
+    margin: 0 auto;
+    width: 90%;
+  }
+  .listingArea ul {
+    display: flex;
+    padding: 0;
+    margin: 0 auto;
     width: 100%;
+    height: auto;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
   .listing {
     border: 5px double black;
@@ -876,7 +903,7 @@ body {
     color: #AFBDBD;
   }
   .description {
-    font-size: 0.5em;
+    font-size: 1em;
   }
   .showImage {
     height: auto;

@@ -329,6 +329,24 @@ body {
   justify-content: center;
   align-items: center;
 }
+/*===========================
+// APP - EDIT.EJS
+===========================*/
+.editPage fieldset {
+  font-size: 0.75em;
+}
+.editPage h2 {
+  color: #3D3B2D;
+}
+#jacketHeader {
+  color: whitesmoke;
+}
+.changesBtn {
+  margin-bottom: 5em;
+}
+.editPage > .pantsSection{
+  color: #3D3B2D;
+}
 /*================SIZES PAST 700px================*/
 @media (min-width: 700px) and (max-width: 999px) {
   /*===========================
@@ -610,6 +628,7 @@ body {
     display: flex;
     flex-direction: column;
   }
+
   /*===========================
   // APP - NEW.EJS
   ===========================*/
@@ -924,26 +943,26 @@ body {
 #colorWheelBackground {
   margin: 0;
   padding: 0;
-  height: 6em;
-  width: 6em;
+  height: 7em;
+  width: 7em;
   background: linear-gradient(#111, #222);
   background: -webkit-linear-gradient(#111, #222);
   background: -moz-linear-gradient(#111, #222);
   background: -o-linear-gradient(#111, #222);
 }
 #colorWheel {
-  margin: 20px auto;
+  margin: 10px auto;
   position: relative;
-  width: 4.5em;
-  height: 4.5em;
+  width: 5em;
+  height: 5em;
 }
 #colorWheelBackground span {
   cursor: pointer;
   position: absolute;
-  top: 2.85em;
-  right: -0.35em;
-  width: 1.5em;
-  height: 0.35em;
+  top: 3em;
+  right: -1em;
+  width: 1.25em;
+  height: 0.25em;
   -ms-transform-origin: -50px 50%;
   -webkit-transform-origin: -50px 50%;
   -moz-transform-origin: -50px 50%;

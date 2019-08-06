@@ -26,7 +26,7 @@ const tweedSchema = Schema({
   backStyle: String,
   pattern: String,
   weight: String,
-  breastPocket: Boolean,
+  breastPocket: String,
   pantsFit: String,
   pleats: String,
   fastening: String,

@@ -15,10 +15,10 @@
           <div class="listing">
             <li class="listItem" style="list-style: none">
               <a href="/tweed/app/<%=tweeds[i].id%>">
-                <img class="listingImage" src="<%=tweeds[i].img%>" alt="<%=tweeds[i].name%> Image"/>
+                <img class="listingImage" src="<%=tweeds[i].img%>" alt="<%=tweeds[i].fabric%> Image"/>
               </a>
               <h5 class="h5">
-                <%=tweeds[i].name%>
+                <%=tweeds[i].fabric%>
               </h5>
             </li>
           </div>
@@ -74,7 +74,7 @@
       <div id="map">
 
       </div>
-      <script>
+      <!-- <script>
         $(() => {
           let map;
           function initMap() {
@@ -84,8 +84,8 @@
             })
           }
         })
-      </script>
-      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCwofZ47oSKL-DUOf_O1Av973oKbIJHU7s&callback=initMap" async defer></script>
+      </script> -->
+      <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCwofZ47oSKL-DUOf_O1Av973oKbIJHU7s&callback=initMap" async defer></script> -->
     </main>
     <footer>
         <% include ../partials/footer.ejs %>

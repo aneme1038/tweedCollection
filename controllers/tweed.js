@@ -65,7 +65,8 @@ tweed.get('/app/:id', (req, res) => {
     res.render(
       'app/show.ejs',
       {
-        tweed: foundTweed
+        tweed: foundTweed,
+        // currentUser: User.find({"TweedList"})
       }
     )
   })

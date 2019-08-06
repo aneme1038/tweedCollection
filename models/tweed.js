@@ -11,14 +11,34 @@ const Schema = mongoose.Schema;
 //Schema
 //___________________
 const tweedSchema = Schema({
-  name: String,
+  fabric: String,
   img: String,
+  fit: String,
   description: String,
-  brand: String,
+  style: String,
+  jacketLapels: String,
+  lapelWidth: String,
+  pocket: String,
+  slant: Boolean,
   color: String,
+  sleeveButtons: Number,
+  buttonHoles: Boolean,
+  backStyle: String,
   pattern: String,
   weight: String,
-  price: Number
+  breastPocket: Boolean,
+  pantsFit: String,
+  pleats: String,
+  fastening: String,
+  sidePockets: String,
+  backPockets: String,
+  pantCuffs: Boolean,
+  vest: Boolean,
+  internalLining: Boolean,
+  monogram: Boolean,
+  pocketSquare: Boolean,
+  buttonThreads: Boolean,
+  neckLining: Boolean
 })
 
 const Tweed = mongoose.model('Tweed', tweedSchema);

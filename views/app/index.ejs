@@ -26,48 +26,49 @@
         </ul>
       </div>
       <script>
-      $(() => {
-        const $span = $('<span>').appendTo($('.listItem'));
-        $span.addClass('ratingBar');
-        for (let j = 1; j <= 5; j++){
-          const $item = $('<i>').attr("id", "item" + j).addClass("far fa-star").appendTo($('.ratingBar'));
-        }
-        //Item 1
-          $('#item1').on('click', () => {
-            $('#item1').removeClass('far');
-            $('#item1').addClass('fas');
+        $(() => {
+          const $span = $('<span>').appendTo($('.listItem'));
+          $span.addClass('ratingBar');
+          for (let j = 1; j <= 5; j++){
+            const $item = $('<i>').attr("id", "item" + j).addClass("far fa-star").appendTo($('.ratingBar'));
+          }
+          //Item 1
+            $('#item1').on('click', () => {
+              $('#item1').removeClass('far');
+              $('#item1').addClass('fas');
+            })
+          //Item 2
+          $('#item2').on('click', () => {
+            $('#item2').removeClass('far');
+            $('#item2').addClass('fas');
+            $('#item1').removeClass('far').addClass('fas');
           })
-        //Item 2
-        $('#item2').on('click', () => {
-          $('#item2').removeClass('far');
-          $('#item2').addClass('fas');
-          $('#item1').removeClass('far').addClass('fas');
+          //Item 3
+          $('#item3').on('click', () => {
+            $('#item3').removeClass('far').addClass('fas');
+            $('#item2').removeClass('far').addClass('fas');
+            $('#item1').removeClass('far').addClass('fas');
+          })
+          //Item 4
+          $('#item4').on('click', () => {
+            $('#item4').removeClass('far').addClass('fas');
+            $('#item3').removeClass('far').addClass('fas');
+            $('#item2').removeClass('far').addClass('fas');
+            $('#item1').removeClass('far').addClass('fas');
+          })
+          //Item 5
+          $('#item5').on('click', () => {
+            $('#item5').removeClass('far').addClass('fas');
+            $('#item4').removeClass('far').addClass('fas');
+            $('#item3').removeClass('far').addClass('fas');
+            $('#item2').removeClass('far').addClass('fas');
+            $('#item1').removeClass('far').addClass('fas');
+          })
+          $('.fas').on('click', () => {
+            $('.fas').removeClass('fas').addClass('far');
+          })
+
         })
-        //Item 3
-        $('#item3').on('click', () => {
-          $('#item3').removeClass('far').addClass('fas');
-          $('#item2').removeClass('far').addClass('fas');
-          $('#item1').removeClass('far').addClass('fas');
-        })
-        //Item 4
-        $('#item4').on('click', () => {
-          $('#item4').removeClass('far').addClass('fas');
-          $('#item3').removeClass('far').addClass('fas');
-          $('#item2').removeClass('far').addClass('fas');
-          $('#item1').removeClass('far').addClass('fas');
-        })
-        //Item 5
-        $('#item5').on('click', () => {
-          $('#item5').removeClass('far').addClass('fas');
-          $('#item4').removeClass('far').addClass('fas');
-          $('#item3').removeClass('far').addClass('fas');
-          $('#item2').removeClass('far').addClass('fas');
-          $('#item1').removeClass('far').addClass('fas');
-        })
-        $('.fas').on('click', () => {
-          $('.fas').removeClass('fas').addClass('far');
-        })
-      })
       </script>
       <!-- Attempt at embedding Google Maps API -->
       <div id="map">

@@ -12,24 +12,53 @@
         <div class="listingDetails">
           <span class="listingRow">
             <a href="/tweed/app/"><button class="btn showBackBtn">Go Back</button></a>
-            <h1 class="h1" id="listingName"><%=tweed.name%></h1>
+            <h1 class="h1" id="listingName"><%=tweed.fabric%></h1>
             <img class="showImage" src="<%=tweed.img%>"/>
-            <h3 class="h3 priceHeader">$<%=tweed.price%></h3>
           </span>
           <div class="specifications">
             <h3 class="h3">Specifications</h3>
             <div class="separater">
             </div>
             <ul>
-              <li style="list-style: none">Brand: <%=tweed.brand%></li>
+              <li style="list-style: none">Fit: <%=tweed.fit%></li>
               <li style="list-style: none">Color: <%=tweed.color%></li>
+              <li style="list-style: none">Style: <%=tweed.style%></li>
               <li style="list-style: none">Pattern: <%=tweed.pattern%></li>
               <li style="list-style: none">Weight: <%=tweed.weight%></li>
               <li style="list-style: none">Description: <p class="description"><%=tweed.description%></p></li>
+              <li style="list-style: none">Jacket Lapels: <%=tweed.jacketLapels%></li>
+              <li style="list-style: none">Lapel Width: <%=tweed.lapelWidth%></li>
+              <li style="list-style: none">Pockets: <%=tweed.pocket%></li>
+              <li style="list-style: none">Pocket Slant: <%=tweed.slant%></li>
+              <li style="list-style: none">Sleeve Buttons: <%=tweed.sleeveButtons%></li>
+              <li style="list-style: none">Button Holes: <%=tweed.buttonHoles%></li>
+              <li style="list-style: none">Back Style: <%=tweed.backStyle%></li>
+              <li style="list-style: none">Breast Pocket: <%=tweed.breastPocket%></li>
+              <li style="list-style: none">Pants Fit: <%=tweed.pantsFit%></li>
+              <li style="list-style: none">Pleats: <%=tweed.pleats%></li>
+              <li style="list-style: none">Pant Fastening: <%=tweed.fastening%></li>
+              <li style="list-style: none">Side Pockets: <%=tweed.sidePockets%></li>
+              <li style="list-style: none">Back Pockets: <%=tweed.backPockets%></li>
+              <li style="list-style: none">Pant Cuffs: <%=tweed.pantCuffs%></li>
+              <li style="list-style: none">Vest: <%=tweed.vest%></li>
+              <li style="list-style: none">Internal Lining: <%=tweed.internalLining%></li>
+              <li style="list-style: none">Monogram: <%=tweed.monogram%></li>
+              <li style="list-style: none">Pocket Square: <%=tweed.pocketSquare%></li>
+              <li style="list-style: none">Button Threads: <%=tweed.buttonThreads%></li>
+              <li style="list-style: none">Neck Lining: <%=tweed.neckLining%></li>
             </ul>
           </div>
         </div>
         <div class="dangerArea">
+          <!-- <script>
+            $(() => {
+              const $addButton = $('<button>').text('Add To Collection').addClass('btn').appendTo($('.dangerArea'));
+              $addButton.addClass('addItem');
+              $addButton.on('click', () => {
+                currentUser.tweedList.push(tweed);
+              })
+            })
+          </script> -->
           <a href="/tweed/app/<%=tweed.id;%>/edit"><button class="btn">Customize</button></a>
           <div class="separateBtn">
           </div>

@@ -84,11 +84,29 @@ body {
   color: #AFBDBD;
   font-size: 0.5em;
 }
+.h2 {
+  color: #AFBDBD;
+  font-size: 0.75em;
+}
 .fieldset {
   font-size: 0.5em;
 }
 .label {
   font-size: 0.5em;
+}
+.h3 {
+  color: whitesmoke;
+  margin: 35px;
+  padding: 15px;
+
+  border-left: 2px double beige;
+}
+.h4 {
+  color: beige;
+  margin: 35px;
+  padding: 15px;
+
+  border-left: 2px double beige;
 }
 
 /*===========================
@@ -270,7 +288,47 @@ body {
   border-bottom: 5px double black;
   width: 90%;
 }
-
+/*===========================
+// APP - NEW.EJS
+===========================*/
+.dropdown {
+  font-size: 0.55em;
+}
+.formSection {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.generalSection, .jacketSection, .pantsSection, .miscSection {
+  width: 100%;
+  height: auto;
+  font-size: 0.55em;
+}
+.generalSection {
+  display: flex;
+  font-size: 0.6em;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.jacketSection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.pantsSection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.miscSection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
 /*================SIZES PAST 700px================*/
 @media (min-width: 700px) and (max-width: 999px) {
   /*===========================

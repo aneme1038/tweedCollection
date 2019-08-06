@@ -11,35 +11,204 @@
       <a href="/tweed/app/"><button class="btn backBtn">Go Back</button></a>
       <div class="container newPage">
         <h1 class="h1 pageHeader createHeader">Create your Tweed Suit</h1>
-        <form action="/tweed/app" method="POST">
-          Name: <input class="input" type="text" name="name" placeholder="Herringbone"/><br/>
-          Image: <input class="input" type="text" name="img" placeholder="Link to Image (URL)"/><br/>
-          Brand: <input class="input" type="text" name="brand" placeholder="Flecks Donegal"><br/>
-          Price: <input class="input" type="number" name="price" placeholder="225"/><br/>
-          <!--Following code is by Casey Jay Martin at https://codepen.io/CASEYJAYMARTIN/pen/wLJkl -->
-          <div id="colorWheelBackground">
-            <div id="colorWheel">
-              <script> $(() => {
-                for (let i = 0; i < 360; i++) {
-                  let $color = $("<span>").appendTo($('#colorWheel'));
-                  $color.attr('id', 'd' + i);
-                  $color.css("background-color", "hsl(" + i + ", 100%, 50%)");
-                  $color.css("msTransform", "rotate(" + i + "deg)");
-                  $color.css("webkitTransform", "rotate(" + i + "deg)");
-                  $color.css("MozTransform", "rotate(" + i + "deg)");
-                  $color.css("OTransform", "rotate(" + i + "deg)");
-                  $color.css("transform", "rotate(" + i + "deg)");
-                }
-              }) </script>
+        <!--With the addition of much more options and customization for tweed suits, this section will be quite long. Customization options for suits (e.g. buttonholes, lapels, sleeves, pockets, etc.) borrowed from https://www.hockerty.com/ for use as labels and values in this application-->
+        <div class="formSection">
+          <form action="/tweed/app" method="POST">
+            <div class="generalSection">
+              <h3 class="h3">Fabric</h3>
+              <select class="dropdown" name="brand">
+                <option value="hampton">Hampton</option>
+                <option value="tammel">Tammel</option>
+                <option value="reque">Reque</option>
+                <option value="quinton">Quinton</option>
+                <option value="olwein">Olwein</option>
+                <option value="pittsford">Pittsford</option>
+              </select>
+              <h3 class="h3">Color</h3>
+              <input class="input" type="text" name="color" placeholder="Gray"/><br/>
+              <!--Following code is by Casey Jay Martin at https://codepen.io/CASEYJAYMARTIN/pen/wLJkl -->
+              <div id="colorWheelBackground">
+                <div id="colorWheel">
+                  <script> $(() => {
+                    for (let i = 0; i < 360; i++) {
+                      let $color = $("<span>").appendTo($('#colorWheel'));
+                      $color.attr('id', 'd' + i);
+                      $color.css("background-color", "hsl(" + i + ", 100%, 50%)");
+                      $color.css("msTransform", "rotate(" + i + "deg)");
+                      $color.css("webkitTransform", "rotate(" + i + "deg)");
+                      $color.css("MozTransform", "rotate(" + i + "deg)");
+                      $color.css("OTransform", "rotate(" + i + "deg)");
+                      $color.css("transform", "rotate(" + i + "deg)");
+                    }
+                  }) </script>
+                </div>
+              </div>
+              <!-- END CODE FROM CODEPEN -->
+              <!--Insert this section of code somewhere after information is posted. Based on the information, update the suit with an image of the item they created...-->
+
+              <h3 class="h3">Image</h3><input class="input" type="text" name="img" placeholder="Link to Image (URL)"/><br/>
+
+              <h3 class="h3">Pattern</h3>
+              <select class="dropdown" name="pattern">
+                <option value="Herringbone">Herringbone</option>
+                <option value="Striped">Striped</option>
+                <option value="Solid">Solid</option>
+                <option value="Checkered">Checkered</option>
+              </select>
+              <h3 class="h3">Description</h3> <input class="input" type="textarea" name="description" placeholder="Description of Suit"/><br/>
+              <h3 class="h3">Weight</h3> <input class="input" type="text" name="weight" placeholder="Mid/230 gsm"/><br/>
             </div>
-          </div>
-          <!-- END CODE FROM CODEPEN -->
-          Color: <input class="input" type="text" name="color" placeholder="Gray"/><br/>
-          Pattern: <input class="input" type="text" name="pattern" placeholder="Standard"/><br/>
-          Description: <input class="input" type="textarea" name="description" placeholder="Description of Suit"/><br/>
-          Weight: <input class="input" type="text" name="weight" placeholder="Mid/230 gsm"/><br/>
-          <input class="btn submitBtn" type="submit" value="Create Suit"/>
-        </form>
+            <h2 class="h2">Customize Jacket</h2>
+            <div class="jacketSection">
+              <h3 class="h3">Style</h3>
+              <select class="dropdown" name="style">
+                <option value="Single-Breasted 1 Button">Single-Breasted 1 Button</option>
+                <option value="Single-Breasted 2 Buttons">Single-Breasted 2 Buttons</option>
+                <option value="Single-Breasted 3 Buttons">Single-Breasted 3 Button</option>
+                <option value="Double-Breasted 2 Buttons">Double-Breasted 2 Buttons</option>
+                <option value="Double-Breasted 4 Buttons">Double-Breasted 4 Buttons</option>
+                <option value="Double-Breasted 6 Buttons">Single-Breasted 6 Buttons</option>
+                <option value="Mandarin">Mandarin</option>
+              </select>
+              <h3 class="h3">Fit</h3>
+              <select class="dropdown" name="fit">
+                <option value="Slim Fit">Slim Fit</option>
+                <option value="Regular">Regular</option>
+              </select>
+              <h3 class="h3">Lapels</h3>
+              <h4 class="h4">Jacket Lapels</h4>
+              <select class="dropdown" name="jacketLapels">
+                <option value="Notch">Notch</option>
+                <option value="Peak">Peak</option>
+                <option value="Shawl">Shawl</option>
+              </select>
+              <h4 class="h4">Lapel Width</h4>
+              <select class="dropdown" name="lapelWidth">
+                <option value="Standard">Standard</option>
+                <option value="Slim">Slim</option>
+                <option value="Wide">Wide</option>
+              </select>
+              <h3 class="h3">Pockets</h3>
+              <h4 class="h4">Pocket Style</h4>
+              <select class="dropdown" name="pocket">
+                <option value="No Pockets">No Pockets</option>
+                <option value="With Flap">With Flap</option>
+                <option value="Double-Welted">Double-Welted</option>
+                <option value="Patched">Patched</option>
+                <option value="With Flap X3">With Flap X3</option>
+                <option value="Double-Welted X3">Double-Welted X3</option>
+              </select>
+              <h4 class="h4">Pocket Slant</h4>
+              <select class="dropdown" name="slant">
+                <option value="false">Standard</option>
+                <option value="true">Slanted</option>
+              </select>
+              <h3 class="h3">Sleeves - Buttons</h3>
+              <h4 class="h4"># Sleeve Buttons</h4>
+              <select class="dropdown" name="sleeveButtons">
+                <option value="0">0</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+              <h4 class="h4">Buttonholes</h4>
+              <select class="dropdown" name="buttonHoles">
+                <option value="true">With Buttonholes</option>
+                <option value="false">No Holes</option>
+              </select>
+              <h3 class="h3">Back Style</h3>
+              <select class="dropdown" name="backStyle">
+                <option value="Ventless">Ventless</option>
+                <option value="Center Vent">Center Vent</option>
+                <option value="Side Vents">Side Vents</option>
+              </select>
+              <h3 class="h3">Breast Pocket</h3>
+              <select class="dropdown" name="breastPocket">
+                <option value="None">None</option>
+                <option value="Yes">Yes</option>
+                <option value="Patched">Patched</option>
+                <option value="Patched X2">Patched X2</option>
+              </select>
+            </div>
+            <h2 class="h2">Customize Pants</h2>
+            <div class="pantsSection">
+              <h3 class="h3">Fit</h3>
+              <select class="dropdown" name="pantsFit">
+                <option value="Normal">Normal Fit</option>
+                <option value="Slim">Slim Fit</option>
+              </select>
+              <h3 class="h3">Pleats</h3>
+              <select class="dropdown" name="pleats">
+                <option value="No Pleats">No Pleats</option>
+                <option value="Pleated">Pleated</option>
+                <option value="Double Pleats">Double Pleats</option>
+              </select>
+              <h3 class="h3">Pants Fastening</h3>
+              <select class="dropdown" name="fastening">
+                <option value="Centered">Centered</option>
+                <option value="Displaced">Displaced</option>
+                <option value="No Button">No Button</option>
+                <option value="Off-Centered Buttonless">Off-Centered Buttonless</option>
+              </select>
+              <h3 class="h3">Pockets</h3>
+              <h4 class="h4">Side Pockets</h4>
+              <select class="dropdown" name="sidePockets">
+                <option value="Diagonal">Diagonal</option>
+                <option value="Vertical">Vertical</option>
+                <option value="Rounded">Rounded</option>
+              </select>
+              <h4 class="h4">Back Pockets</h4>
+              <select class="dropdown" name="backPockets">
+                <option value="No Pockets">No Pockets</option>
+                <option value="Double-Welted Pocket With Button">Double-Welted Pocket With Button</option>
+                <option value="Patched">Patched</option>
+                <option value="Flap Pockets">Flap Pockets</option>
+                <option value="Double-Welted Pocket With Button X2">Double-Welted Pocket With Button X2</option>
+                <option value="Patched X2">Patched X2</option>
+                <option value="Flap Pockets X2">Flap Pockets X2</option>
+              </select>
+              <h3 class="h3">Pant Cuffs</h3>
+              <select class="dropdown" name="pantCuffs">
+                <option value="false">No Pant Cuffs</option>
+                <option value="true">With Pant Cuffs</option>
+              </select>
+            </div>
+            <h2 class="h2">Add-Ons</h2>
+            <div class="miscSection">
+              <h3 class="h3">Vest</h3>
+              <select class="dropdown" name="vest">
+                <option value="false">2 Piece Suit</option>
+                <option value="true">3 Piece Suit</option>
+              </select>
+              <h3 class="h3">Internal Lining</h3>
+              <select class="dropdown" name="internalLining">
+                <option value="false">No</option>
+                <option value="true">Yes</option>
+              </select>
+              <h3 class="h3">Monogram</h3>
+              <select class="dropdown" name="monogram">
+                <option value="false">No</option>
+                <option value="true">Yes</option>
+              </select>
+              <h3 class="h3">Pocket Square</h3>
+              <select class="dropdown" name="pocketSquare">
+                <option value="false">No</option>
+                <option value="true">Yes</option>
+              </select>
+              <h3 class="h3">Button Threads / Holes</h3>
+              <select class="dropdown" name="buttonThreads">
+                <option value="false">No</option>
+                <option value="true">Yes</option>
+              </select>
+              <h3 class="h3">Neck Lining</h3>
+              <select class="dropdown" name="neckLining">
+                <option value="false">No</option>
+                <option value="true">Yes</option>
+              </select>
+            </div>
+            <input class="btn submitBtn" type="submit" value="Create Suit"/>
+          </form>
+        </div>
       </div>
     </main>
     <footer>

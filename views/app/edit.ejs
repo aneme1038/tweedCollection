@@ -7,7 +7,7 @@
     <header>
       <% include ../partials/header.ejs %>
     </header>
-    <div class="container">
+    <div class="container editPage">
       <h1 class="h1 pageHeader">Edit Tweed Suit</h1>
       <form action="/tweed/app/<%=tweed.id%>?_method=PUT" method="POST">
         <fieldset class="fieldset">
@@ -18,7 +18,7 @@
           Pattern: <input class="input" type="text" name="pattern" value="<%=tweed.pattern%>"/><br/>
           Weight: <input class="input" type="text" name="weight" value="<%=tweed.weight%>"/><br/>
           Description: <input class="input textArea" type="textarea" name="description" value="<%=tweed.description%>"/><br/>
-          <input class="btn submitBtn" type="submit" value="Submit Changes"/>
+          <input class="btn changesBtn" type="submit" value="Submit Changes"/>
         </fieldset>
       </div>
       <footer>

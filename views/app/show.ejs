@@ -8,17 +8,17 @@
       <% include ../partials/header.ejs %>
     </header>
     <main>
-      <div class="container">
-        <a href="/tweed/app/"><button class="btn showBackBtn">Go Back</button></a>
+      <div class="showContainer">
         <div class="listingDetails">
           <span class="listingRow">
+            <a href="/tweed/app/"><button class="btn showBackBtn">Go Back</button></a>
             <h1 class="h1" id="listingName"><%=tweed.name%></h1>
             <img class="showImage" src="<%=tweed.img%>"/>
             <h3 class="h3 priceHeader">$<%=tweed.price%></h3>
           </span>
-          <fieldset>
+          <div class="specifications">
             <h3 class="h3">Specifications</h3>
-            <div class="separateBtn">
+            <div class="separater">
             </div>
             <ul>
               <li style="list-style: none">Brand: <%=tweed.brand%></li>
@@ -27,17 +27,15 @@
               <li style="list-style: none">Weight: <%=tweed.weight%></li>
               <li style="list-style: none">Description: <p class="description"><%=tweed.description%></p></li>
             </ul>
-          </fieldset>
+          </div>
         </div>
         <div class="dangerArea">
-          <fieldset id="editArea">
-            <a href="/tweed/app/<%=tweed.id;%>/edit"><button class="btn">Customize</button></a>
-            <div class="separateBtn">
-            </div>
-            <form action="/tweed/app/<%=tweed.id;%>?_method=DELETE" method="POST">
-              <input class="btn" type="submit" id="deleteBtn" value="DELETE SUIT">
-            </form>
-          </fieldset>
+          <a href="/tweed/app/<%=tweed.id;%>/edit"><button class="btn">Customize</button></a>
+          <div class="separateBtn">
+          </div>
+          <form action="/tweed/app/<%=tweed.id;%>?_method=DELETE" method="POST">
+            <input class="btn" type="submit" id="deleteBtn" value="DELETE SUIT">
+          </form>
         </div>
       </div>
     </main>

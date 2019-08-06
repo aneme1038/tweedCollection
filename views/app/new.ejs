@@ -16,6 +16,24 @@
           Image: <input class="input" type="text" name="img" placeholder="Link to Image (URL)"/><br/>
           Brand: <input class="input" type="text" name="brand" placeholder="Flecks Donegal"><br/>
           Price: <input class="input" type="number" name="price" placeholder="225"/><br/>
+          <!--Following code is by Casey Jay Martin at https://codepen.io/CASEYJAYMARTIN/pen/wLJkl -->
+          <div id="colorWheelBackground">
+            <div id="colorWheel">
+              <script> $(() => {
+                for (let i = 0; i < 360; i++) {
+                  let $color = $("<span>").appendTo($('#colorWheel'));
+                  $color.attr('id', 'd' + i);
+                  $color.css("background-color", "hsl(" + i + ", 100%, 50%)");
+                  $color.css("msTransform", "rotate(" + i + "deg)");
+                  $color.css("webkitTransform", "rotate(" + i + "deg)");
+                  $color.css("MozTransform", "rotate(" + i + "deg)");
+                  $color.css("OTransform", "rotate(" + i + "deg)");
+                  $color.css("transform", "rotate(" + i + "deg)");
+                }
+              }) </script>
+            </div>
+          </div>
+          <!-- END CODE FROM CODEPEN -->
           Color: <input class="input" type="text" name="color" placeholder="Gray"/><br/>
           Pattern: <input class="input" type="text" name="pattern" placeholder="Standard"/><br/>
           Description: <input class="input" type="textarea" name="description" placeholder="Description of Suit"/><br/>

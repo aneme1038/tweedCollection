@@ -856,3 +856,45 @@ body {
     font-size: 1.15em;
   }
 }
+/*====google maps css ======*/
+#map {
+  height: 80%;
+  width: 80%;
+  margin: 100px;
+}
+/*========following css code by Casey  Jay Martin from https://codepen.io/CASEYJAYMARTIN/pen/wLJkl for the Color Wheel CSS properties==========================*/
+#colorWheelBackground {
+  margin: 0;
+  padding: 0;
+  height: 6em;
+  width: 6em;
+  background: linear-gradient(#111, #222);
+  background: -webkit-linear-gradient(#111, #222);
+  background: -moz-linear-gradient(#111, #222);
+  background: -o-linear-gradient(#111, #222);
+}
+#colorWheel {
+  margin: 20px auto;
+  position: relative;
+  width: 4.5em;
+  height: 4.5em;
+}
+#colorWheelBackground span {
+  cursor: pointer;
+  position: absolute;
+  top: 2.85em;
+  right: -0.35em;
+  width: 1.5em;
+  height: 0.35em;
+  -ms-transform-origin: -50px 50%;
+  -webkit-transform-origin: -50px 50%;
+  -moz-transform-origin: -50px 50%;
+  -o-transform-origin: -50px 50%;
+  transform-origin: -50px 50%;
+  opacity: 0.1;
+}
+#colorWheelBackground span:hover, #colorWheelBackground span:active {
+  opacity: 1;
+  border-top-right-radius: 100%;
+  border-bottom-right-radius: 100%;
+}

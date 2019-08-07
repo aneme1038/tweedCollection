@@ -45,8 +45,8 @@ tweed.get('/app/seed', (req, res) => {
       neckLining: false
     }
   ], (error, data) => {
-    console.log(error);
-    console.log(data);
+    // console.log(error);
+    // console.log(data);
     res.redirect('/tweed/app/')
   })
 })
@@ -78,16 +78,16 @@ tweed.get('/app/:id/edit', (req, res) => {
   //UPDATE / PUT Route
 tweed.put('/app/:id', (req, res) => {
   Tweed.findByIdAndUpdate(req.params.id, req.body, {new:true}, (error, updatedModel) => {
-    console.log(req.body);
-    console.log(error);
+    // console.log(req.body);
+    // console.log(error);
     res.redirect('/tweed/app')
   })
 })
   //Show Route for Tweed Suits
 tweed.get('/app/:id', (req, res) => {
   Tweed.findById(req.params.id, (error, foundTweed) => {
-    console.log(foundTweed);
-    console.log(error);
+    // console.log(foundTweed);
+    // console.log(error);
     res.render(
       'app/show.ejs',
       {
@@ -101,15 +101,15 @@ tweed.get('/app/:id', (req, res) => {
 tweed.post('/app', (req, res) => {
   Tweed.create(req.body, (error, createdTweed) => {
     res.redirect('/tweed/app');
-    console.log(req.body);
-    console.log(error);
+    // console.log(req.body);
+    // console.log(error);
   })
 })
   //INDEX for Tweed
 tweed.get('/app', (req, res) => {
   Tweed.find({}, (error, allTweed) => {
-    console.log(error);
-    console.log(allTweed);
+    // console.log(error);
+    // console.log(allTweed);
     res.render(
       'app/index.ejs',
       {

@@ -31,6 +31,8 @@ Google maps was challenging to incorporate and could never get incorporated due 
 
 The rating system can only affect 1 tweed suit with filling in the stars. Also, the stars cannot be removed from clicking them again, which is another challenge to overcome in the future. The third aspect of this is that you cannot place stars on any other tweed suits.
 
+The logged in user was planned to be able to have their own "personal" collection specific to their username and profile different than other users collections. The issue with this was attempting to figure out how to first get the user session in a different js file and push a specific tweed suit item into an array which is attached to the user's profile. I fiddled around with the functionality but kept running into errors, issues, and determining if I needed additional dependancies for it.
+
 An additional challenge presented in adding more customization options which ended up breaking my application a couple times. Was able to correct these errors. Anmot
 
 The final challenge presented in the color wheel and determining how to grab values based on what you clicked in the color wheel. It would have likely required alot more Javascript to determine the click event and specific value the user clicked. Thus, I avoided that challenge until my application was functional.

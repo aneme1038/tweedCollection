@@ -36,3 +36,11 @@ The logged in user was planned to be able to have their own "personal" collectio
 An additional challenge presented in adding more customization options which ended up breaking my application a couple times. Was able to correct these errors. Anmot
 
 The final challenge presented in the color wheel and determining how to grab values based on what you clicked in the color wheel. It would have likely required alot more Javascript to determine the click event and specific value the user clicked. Thus, I avoided that challenge until my application was functional.
+
+FUTURE FEATURES
+---------------
+Implementation of Google Maps
+CSS Animations and re-styled customization page that will dynamically animate the different sections for customizing your suit.
+Personal Tweed Collection for each user.
+Color Wheel/Picker for customization section.
+An list of websites for each item that can be searched to shop for that specific item.

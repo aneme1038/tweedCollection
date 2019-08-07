@@ -1,5 +1,5 @@
 # tweedCollection
-A collection of tweed suits that can be dynamically added, updated, and deleted.
+A collection of tweed suits that can be dynamically added, updated, and deleted. Tweed-ly is deployed at https://tweedcollection.herokuapp.com/
 
 Tweed-ly is created by Aaron Neme for the sole use and purpose of fulfilling project requirements in Unit 2 of General Assembly. 
 
